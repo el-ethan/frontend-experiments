@@ -1,0 +1,22 @@
+<!-- Testing classList and also creating stuff with JavaScript instead of html for no reason -->
+<html>
+    <body>
+    </body>
+
+    <script>
+        const div = document.createElement('div')
+        const button = document.createElement('button')
+        document.querySelector('body').appendChild(button)
+        document.querySelector('body').appendChild(div)
+        button.textContent ='hello'
+        button.onclick = () => div.classList.toggle('test')
+    </script>
+    
+    <style>
+        .test {
+            background: cyan;
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</html>
