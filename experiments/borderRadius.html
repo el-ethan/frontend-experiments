@@ -3,7 +3,7 @@
     <div id="square-circle">
     </div>
     
-    <div id="test-shape"></div>
+    <!-- <div id="test-shape"></div> -->
 </body>
 
 
@@ -16,6 +16,7 @@
 @keyframes blob {
     0% {
         border-radius: 50%;
+        background: #8be9fd;
     }
     10% {
         border-radius: 25% 10%;
@@ -27,13 +28,23 @@
 
     50% {
         border-radius:  10px 100px / 120px;
+        background: #ff79c6;
     }
     60% {
         border-radius: 25%;
+        backlground: #f1fa8c;
     }
     100% {
         border-radius: 50%;
+        background: #bd93f9;
     }
+}
+
+body {
+    background:  #282a36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #test-shape {
@@ -44,7 +55,7 @@
 }
 
 #square-circle {
-    background-color: aquamarine;
+    /* background-color: #8be9fd; */
     height: 500px;
     width: 500px;
     animation-duration: 3s;
