@@ -1,0 +1,37 @@
+<body>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>    
+</body>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes progression {
+        from {
+            width: 0%;
+            background: indianred;
+        }
+        to {
+            width: 75%;
+        }
+    }
+
+    #progress-container {
+        background-color: lightslategrey;
+        height: 50px;
+        width: 300px;
+    }
+
+    #progress-bar {
+        animation-name: progression;
+        animation-duration: 5s;
+        width: 75%;
+        height: 100%;
+        background: mediumturquoise;
+    }
+</style>
