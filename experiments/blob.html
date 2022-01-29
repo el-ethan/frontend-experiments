@@ -1,4 +1,6 @@
-
+<!--
+    Experiments in border radius, animation, and media queries
+-->
 <body>
     <div id="outer-container">
         <div id="blob-container">
@@ -89,7 +91,11 @@ body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     margin: 3em;
+}
 
+.square-circle:hover {
+  animation-play-state: paused;
+  cursor: help;
 }
 
 @media (max-height: 1100px) {
