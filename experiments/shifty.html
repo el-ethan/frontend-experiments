@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="base-styles.css">
+
+<body>
+    <div class="switch-body">
+        <div class="switch">
+        </div>
+    </div>
+    <div class="switch-body">
+        <div class="switch">
+        </div>
+    </div>
+</body>
+
+
+<style>
+    .switch-body {
+        background-color: beige;
+        width: 75px;
+        height: 25px;
+        border-radius: 45%;
+    }
+
+    .switch {
+        background-color: aqua;
+        height: 25px;
+        width: 37.5px;
+        position: absolute;
+        border-radius: 50%;
+        animation: shifty 10s;
+        transform: translateX(18.75px);
+
+    }
+
+    @keyframes shifty {
+        25% {
+            transform: translateX(37.5px);
+        }
+
+        50% {
+            transform: translateX(0px);
+        }
+
+        75% {
+            transform: translateX(37.5px);
+        }
+    }
+/* 
+    .switch-body:hover .switch{
+        transform: translateX(37.5px);
+    } */
+</style>
