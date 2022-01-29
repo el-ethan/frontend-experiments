@@ -9,29 +9,38 @@
         <div class="switch">
         </div>
     </div>
+    <!-- <div class="mouth"></div> -->
 </body>
 
 
 <style>
+    .mouth {
+        width: 150px;
+        height: 10px;
+        background-color: red;
+    }
+
     .switch-body {
         background-color: beige;
         width: 75px;
-        height: 25px;
+        height: 27px;
         border-radius: 45%;
     }
 
     .switch {
-        background-color: aqua;
         height: 25px;
         width: 37.5px;
         position: absolute;
         border-radius: 50%;
         animation: shifty 10s;
         transform: translateX(18.75px);
-
+        background-color: red;
     }
 
     @keyframes shifty {
+        0% {
+            background-color: aqua;
+        }
         25% {
             transform: translateX(37.5px);
         }
@@ -41,6 +50,7 @@
         }
 
         75% {
+            background-color: aqua;
             transform: translateX(37.5px);
         }
     }
