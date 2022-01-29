@@ -1,6 +1,17 @@
 <link rel="stylesheet" href="base-styles.css">
 
 <body>
+    <!-- 
+        label and not div here because of this:   
+
+        "Associating a <label> with an <input> element offers some major advantages:
+        
+        * The label text is not only visually associated with its corresponding text input; it is programmatically associated with it too. This means that, for example, a screen reader will read out the label when the user is focused on the form input, making it easier for an assistive technology user to understand what data should be entered.
+
+        * When a user clicks or touches/taps a label, the browser passes the focus to its associated input (the resulting event is also raised for the input). That increased hit area for focusing the input provides an advantage to anyone trying to activate it — including those using a touch-screen device."
+
+        from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
+    -->
     <label>
         <input type="checkbox" />
         <span id="switch"></span>
@@ -11,8 +22,8 @@
     label {
         position: relative;
         display: inline-block;
-        width: 32px;
-        height: 16px;
+        width: 200px;
+        height: 100px;
     }
 
     #switch {
@@ -29,10 +40,10 @@
     #switch:before {
         position: absolute;
         content: '';
-        height: 12px;
-        width: 12px;
-        left: 2px;
-        bottom: 2px;
+        height: 90px;
+        width: 90px;
+        left: 5px;
+        bottom: 5px;
         background-color: white;
         border-radius: 50%;
         transition: .4s;
@@ -49,6 +60,6 @@
     }
 
     input:checked+#switch:before {
-        transform: translateX(16px);
+        transform: translateX(100px);
     }
 </style>
