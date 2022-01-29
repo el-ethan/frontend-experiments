@@ -1,9 +1,16 @@
 
 <body>
-    <div id="square-circle">
+    <div id="outer-container">
+        <div id="blob-container">
+            <div class="square-circle side-blob">
+            </div>
+            <div class="square-circle">
+            </div>
+            <div class="square-circle side-blob">
+            </div>
+        </div>
+        </div>
     </div>
-    
-    <!-- <div id="test-shape"></div> -->
 </body>
 
 
@@ -12,6 +19,18 @@
 </script>
 
 <style>
+
+#outer-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+#blob-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 @keyframes blob {
     0% {
@@ -28,10 +47,8 @@
     }
 
     50% {
-        border-radius:  10px 100px / 120px;
+        border-radius:  10px 500px / 120px;
         background: #ff79c6;
-        height: 100px;
-        width: 100px;
     }
     60% {
         border-radius: 25%;
@@ -44,11 +61,16 @@
     }
 }
 
+.side-blob {
+    visibility: hidden;
+    height: 500px;
+    width: 500px;
+}
+
+
 body {
     background:  #282a36;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
 }
 
 #test-shape {
@@ -58,14 +80,43 @@ body {
     width: 500px;
 }
 
-#square-circle {
+.square-circle {
     /* background-color: #8be9fd; */
-    height: 500px;
-    width: 500px;
+    height: 1000px;
+    width: 1000px;
     animation-duration: 20s;
     animation-name: blob;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    margin: 3em;
+
+}
+
+@media (max-height: 1100px) {
+    .square-circle {
+        height: 500px;
+        width: 500px;
+    }
+
+    .side-blob {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 2500px) {
+    .square-circle {
+        height: 300px;
+        width: 300px;
+    }
+
+    #blob-container {
+        flex-flow: column;
+    }
+
+    .side-blob {
+        visibility: visible;
+    }
+
 }
 
 </style>
