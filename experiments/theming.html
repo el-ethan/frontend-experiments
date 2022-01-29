@@ -1,0 +1,99 @@
+<body class="dracula-colors">
+    <article>
+        <header>
+            <h1>On the Road</h1>
+            <strong>By Jack Kerouac</strong>
+        </header>
+        <div class="para-container">
+            <p>
+                On the Road is a 1957 novel by American writer Jack Kerouac, based on the travels of Kerouac and his friends across the United States. It is considered a defining work of the postwar Beat and Counterculture generations, with its protagonists living life against a backdrop of jazz, poetry, and drug use. The novel is a roman à clef, with many key figures of the Beat movement, such as William S. Burroughs (Old Bull Lee), Allen Ginsberg (Carlo Marx), and Neal Cassady (Dean Moriarty) represented by characters in the book, including Kerouac himself as the narrator Sal Paradise.
+            </p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/8a/OnTheRoad.jpg" align="right">
+        </div>
+        <button id="dracula-switch">🧛‍♂️</button>
+        <button id="oblivion-switch">🕳</button>
+    </article>
+</body>
+
+<script>
+    document.getElementById('dracula-switch').onclick = () => {
+        document.body.classList.add('dracula-colors')
+        document.body.classList.remove('oblivion-colors')
+    }
+
+    document.getElementById('oblivion-switch').onclick = () => {
+        document.body.classList.add('oblivion-colors')
+        document.body.classList.remove('dracula-colors')
+    }
+</script>
+
+<style>
+    /*     
+┌───────────┬──────────┬─────────────┬───────────────┬───┐
+│   Color   │   Hex    │     RGB     │      HSL      │   │
+├───────────┼──────────┼─────────────┼───────────────┼───┤
+│ Modifiers │ #282a36  │    40 42 54 │ 231° 15% 18%  │ ■ │
+│ Alphas    │ #44475a  │    68 71 90 │ 232° 14% 31%  │ ■ │
+│ Legends   │ #f8f8f2  │ 248 248 242 │ 60° 30% 96%   │ ■ │
+│           │          │             │               │   │
+│ Pink      │ #ff79c6  │ 255 121 198 │ 326° 100% 74% │ ■ │
+│ Purple    │ #bd93f9  │ 189 147 249 │ 265° 89% 78%  │ ■ │
+│ Cyan      │ #8be9fd  │ 139 233 253 │ 191° 97% 77%  │ ■ │
+│ Yellow    │ #f1fa8c  │ 241 250 140 │ 65° 92% 76%   │ ■ │
+│ Green     │ #50fa7b  │  80 250 123 │ 135° 94% 65%  │ ■ │
+│ Red       │ #ff5555  │   255 85 85 │ 0° 100% 67%   │ ■ │
+└───────────┴──────────┴─────────────┴───────────────┴───┘
+    */
+    .dracula-colors {
+        --clr-dark: #282a36;
+        --clr-semidark: #44475a;
+        --clr-light: #f8f8f2;
+        --clr-primary: #8be9fd;
+        --clr-secondary: #bd93f9;
+        --clr-tertiary: #50fa7b;
+    }
+
+    .oblivion-colors {
+        --clr-dark: #1E1E1E;
+        --clr-semidark: #2A2A2A;
+        --clr-light: #D8D8D8;
+        --clr-primary: #BED6FF;
+        --clr-secondary: #D25252;
+        --clr-tertiary: #FFC600;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--clr-dark);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+    }
+
+    button {
+        background-color: var(--clr-primary);
+        height: 50px;
+        width: 100px;
+        cursor: pointer;
+    }
+
+    .para-container {
+        display: flex;
+        justify-content: center;
+        width: 700px;
+        align-items: center;
+    }
+
+    p {
+        color: var(--clr-secondary)
+    }
+
+    h1 {
+        color: var(--clr-primary)
+    }
+
+    strong {
+        color: var(--clr-tertiary);
+    }
+</style>
