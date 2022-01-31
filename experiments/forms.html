@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="base-styles.css">
+
+<body>
+    <form action="">
+        <label>So whatcha whatcha whatcha want?
+            <input name="what-you-want" required type="text" />
+        </label>
+        <input type="submit"/>
+    </form>
+</body>
+
+<script>
+    const form = document.querySelector('form')
+
+    form.addEventListener('submit', (e) => {
+        const data = new FormData(form)
+        const whatYouWant = data.get('what-you-want')
+        alert(whatYouWant)
+        e.preventDefault()
+    })
+</script>
+
+<style>
+    label {
+        color: #8be9fd;
+    }
+</style>
+
+<!-- 
+    Resources:
+
+    https://flaviocopes.com/form-events/
+ -->
