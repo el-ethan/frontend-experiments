@@ -2,9 +2,13 @@
 
 <body>
     <form action="">
-        <label>So whatcha whatcha whatcha want?
-            <input name="what-you-want" required type="text" />
-        </label>
+        <label for="what-you-want">So whatcha whatcha whatcha want?</label>
+        <input id="what-you-want" name="what-you-want" required type="text" />
+        <select>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
         <input type="submit"/>
     </form>
 </body>
@@ -23,6 +27,7 @@
 <style>
     label {
         color: #8be9fd;
+        display: block;
     }
 </style>
 
